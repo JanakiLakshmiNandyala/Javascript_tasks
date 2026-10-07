@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sum Calculator</title>
+    <style>
+      body {
+        background-color: #042f2e;
+        color: #f0fdf4;
+        font-family: system-ui, -apple-system, sans-serif;
+      }
+      .container {
+        width: 420px;
+        margin: 40px auto;
+        padding: 24px;
+        background-color: #064e3b;
+        color: #ecfdf5;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        border: 1px solid #10b981;
+      }
+      label,
+      input,
+      button {
+        font-size: 1.2rem;
+        margin: 8px 0;
+      }
+      input {
+        width: 100%;
+        padding: 8px 12px;
+        border-radius: 8px;
+        border: 1px solid #059669;
+        background-color: #022c22;
+        color: #ffffff;
+        box-sizing: border-box;
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #10b981;
+        color: #022c22;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-top: 15px;
+      }
+      button:hover {
+        background-color: #34d399;
+      }
+      h1 {
+        text-align: center;
+        margin-top: 20px;
+      }
+      #result {
+        margin-top: 15px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-align: center;
+        color: #6ee7b7;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Sum of Three Numbers</h1>
+    <div class="container">
+      <div class="sub-container">
+        <label for="n1">Enter your 1st number:</label><br />
+        <input type="number" id="n1" /><br />
+        
+        <label for="n2">Enter your 2nd number:</label><br />
+        <input type="number" id="n2" /><br />
+        
+        <label for="n3">Enter your 3rd number:</label><br />
+        <input type="number" id="n3" /><br />
+        
+        <button onclick="sum()">Calculate Sum</button>
+        <p id="result"></p>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

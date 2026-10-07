@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: #f8fafc;
+        }
+
+        .calculator-card {
+            width: 100%;
+            max-width: 420px;
+            padding: 30px;
+            background-color: #1e293b;
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            border: 1px solid #334155;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            color: #38bdf8;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 12px;
+        }
+
+        label {
+            font-size: 0.95rem;
+            color: #94a3b8;
+        }
+
+        input {
+            padding: 10px 14px;
+            font-size: 1rem;
+            border-radius: 8px;
+            border: 1px solid #475569;
+            background-color: #0f172a;
+            color: #f8fafc;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #38bdf8;
+        }
+
+        .button-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 18px 0;
+        }
+
+        button {
+            padding: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            background-color: #0284c7;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0369a1;
+        }
+
+        .result-group {
+            margin-top: 15px;
+        }
+
+        .result-group input {
+            background-color: #0284c7;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-align: center;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="calculator-card">
+        <h1>Basic Calculator</h1>
+
+        <div class="input-group">
+            <label for="n1">Enter First Number (n1):</label>
+            <input type="number" id="n1" placeholder="0">
+        </div>
+
+        <div class="input-group">
+            <label for="n2">Enter Second Number (n2):</label>
+            <input type="number" id="n2" placeholder="0">
+        </div>
+
+        <div class="button-grid">
+            <button onclick="addnum()">Addition (+)</button>
+            <button onclick="subnum()">Subtraction (-)</button>
+            <button onclick="mulnum()">Multiplication (×)</button>
+            <button onclick="divnum()">Division (÷)</button>
+        </div>
+
+        <div class="input-group result-group">
+            <label for="result">Result:</label>
+            <input type="text" id="result" readonly placeholder="Calculated Value">
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
